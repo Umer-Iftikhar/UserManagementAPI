@@ -1,0 +1,40 @@
+﻿### Get all users
+GET http://localhost:5064/api/users
+Accept: application/json
+
+###
+
+### Get user by ID
+GET http://localhost:5064/api/users/1
+Accept: application/json
+
+###
+
+### Add a new user
+POST http://localhost:5064/api/users
+Content-Type: application/json
+
+{
+  "firstName": "Alice",
+  "lastName": "Johnson",
+  "email": "alice.johnson@techhive.com",
+  "department": "HR"
+}
+
+###
+
+### Update an existing user
+PUT http://localhost:5064/api/users/1
+Content-Type: application/json
+
+{
+  "firstName": "Alice",
+  "lastName": "Smith",
+  "email": "alice.smith@techhive.com",
+  "department": "IT"
+}
+
+###
+
+### Delete a user
+DELETE http://localhost:5064/api/users/1

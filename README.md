@@ -6,23 +6,17 @@ This project supports full CRUD operations, validation, middleware for logging, 
 ---
 
 ## 📁 Project Structure
-
+```
 UserManagementAPI/
 ├── Program.cs
 ├── Models/
-│ └── User.cs
+│      └── User.cs
 ├── Middleware/
-│ ├── ErrorHandlingMiddleware.cs
-│ ├── AuthenticationMiddleware.cs
-│ └── RequestResponseLoggingMiddleware.cs
-├── Services/
-│ └── UserService.cs
-├── README.md
-
-yaml
-Copy
-Edit
-
+│      ├── ErrorHandlingMiddleware.cs
+│      ├── AuthenticationMiddleware.cs
+│      └── RequestResponseLoggingMiddleware.cs
+└── README.md
+```
 ---
 
 ## 🚀 Getting Started
@@ -41,25 +35,32 @@ cd UserManagementAPI
 dotnet run
 Navigate to:
 https://localhost:{PORT}/api/users
-```bash
+```
 
 ### 📬 API Endpoints
-Method	Endpoint	Description
-GET	/api/users	Get all users
-POST	/api/users	Add a new user
-PUT	/api/users/{id}	Update a user
-DELETE	/api/users/{id}	Delete a user
 
-🔐 Authentication
-This API uses a simple API Key Authentication method.
+| Method | Endpoint           | Description     |
+|--------|--------------------|-----------------|
+| GET    | `/api/users`       | Get all users   |
+| POST   | `/api/users`       | Add a new user  |
+| PUT    | `/api/users/{id}`  | Update a user   |
+| DELETE | `/api/users/{id}`  | Delete a user   |
 
+---
+
+### 🔐 Authentication
+
+This API uses a simple **API Key Authentication** method.  
 Include this header in all requests:
 
 http
 Copy
 Edit
 X-Api-Key: your-secret-key
-🧠 Features
+
+---
+
+### 🧠 Features
 ✅ Minimal API structure
 
 ✅ API Key Authentication
@@ -68,24 +69,23 @@ X-Api-Key: your-secret-key
 
 ✅ Data Validation via Data Annotations
 
-✅ DTOs for clean data transfer
-
 ✅ In-memory store (no database required)
 
-🤖 Powered with Copilot
-Throughout development, I used Microsoft Copilot to:
+---
 
-Debug model binding issues and resolve 400/500 errors
+### 🤖 Powered with Copilot
 
-Refactor data structures (e.g., from List to Dictionary for performance)
+Throughout development, I used **Microsoft Copilot** to:
 
-Implement validation using Validator.TryValidateObject
+- Debug model binding issues and resolve 400/500 errors  
+- Refactor data structures (e.g., from `List` to `Dictionary` for performance)  
+- Implement validation using `Validator.TryValidateObject`  
+- Design and register custom middleware components  
+- Improve error messaging and developer experience
 
-Design and register custom middleware components
+---
 
-Improve error messaging and developer experience
-
-📄 License
+###  📄 License
 MIT License
 © 2025 Umer Iftikhar
-See LICENSE for details.
+See [LICENSE](LICENSE) for details.

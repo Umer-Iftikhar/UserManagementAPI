@@ -8,17 +8,20 @@ This project supports full CRUD operations, validation, middleware for logging, 
 ## 📁 Project Structure
 
 UserManagementAPI/
-├── Program.cs # Entry point with endpoint definitions and middleware registration
+├── Program.cs
 ├── Models/
-│ └── User.cs # User model with validation attributes
+│ └── User.cs
 ├── Middleware/
-│ ├── ErrorHandlingMiddleware.cs # Global error handler
-│ ├── AuthenticationMiddleware.cs # API key-based authentication
-│ └── RequestResponseLoggingMiddleware.cs # Request/Response logger
+│ ├── ErrorHandlingMiddleware.cs
+│ ├── AuthenticationMiddleware.cs
+│ └── RequestResponseLoggingMiddleware.cs
 ├── Services/
-│ └── UserService.cs # In-memory data store and CRUD logic
-├── README.md # Project documentation
+│ └── UserService.cs
+├── README.md
 
+yaml
+Copy
+Edit
 
 ---
 
@@ -28,63 +31,60 @@ UserManagementAPI/
 
 - [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
 - Git
-- Postman or `curl` (for API testing)
+- Postman or `curl`
 
 ### 🛠️ Setup Instructions
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/Umer-Iftikhar/UserManagementAPI.git
-   cd UserManagementAPI
+```bash
+git clone https://github.com/Umer-Iftikhar/UserManagementAPI.git
+cd UserManagementAPI
+dotnet run
+Navigate to:
+https://localhost:{PORT}/api/users
 
-2. **Run the API
-    ```bash
-    dotnet run
-3.**api will be available at:
-  ```bash
-  https://localhost:{PORT}/api/users
-
-### 📬 API Endpoints
-
+📬 API Endpoints
 Method	Endpoint	Description
 GET	/api/users	Get all users
-POST	/api/users	Add new user
-PUT	/api/users/{id}	Update user by ID
-DELETE	/api/users/{id}	Delete user by ID
+POST	/api/users	Add a new user
+PUT	/api/users/{id}	Update a user
+DELETE	/api/users/{id}	Delete a user
 
-🔐 Authentication Required
-Include a header:
+🔐 Authentication
+This API uses a simple API Key Authentication method.
+
+Include this header in all requests:
+
+http
+Copy
+Edit
 X-Api-Key: your-secret-key
+🧠 Features
+✅ Minimal API structure
 
-### 🤖 Copilot Collaboration
-Throughout development, I used Microsoft Copilot to:
+✅ API Key Authentication
 
-Debug model binding issues and resolve 400/500 errors
+✅ Custom Middleware (logging + error handling)
 
-Refactor data structures (e.g., from List to Dictionary for performance)
+✅ Data Validation via Data Annotations
 
-Implement validation using Validator.TryValidateObject
+✅ DTOs for clean data transfer
 
-Design and register custom middleware components
+✅ In-memory store (no database required)
 
-Improve error messaging and developer experience
+🤖 Powered with Copilot
+Microsoft Copilot helped me:
 
-Copilot provided step-by-step guidance, code snippets, and best practices that accelerated development and deepened my understanding of backend API design.
+Fix model binding issues
 
-### 🧰 Technologies Used
-.NET 8 Minimal APIs
+Write cleaner LINQ queries
 
-C#
+Refactor middleware logic
 
-In-Memory Data Store
+Generate example DTOs
 
-Custom Middleware
+Enhance error responses
 
-Error Handling
-
-API Key Authentication
-
-Request/Response Logging
-
-### 📄 License
-This project is licensed under the MIT License.
+📄 License
+MIT License
+© 2025 Umer Iftikhar
+See LICENSE for details.

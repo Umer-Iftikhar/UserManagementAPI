@@ -41,8 +41,9 @@ cd UserManagementAPI
 dotnet run
 Navigate to:
 https://localhost:{PORT}/api/users
+```bash
 
-📬 API Endpoints
+### 📬 API Endpoints
 Method	Endpoint	Description
 GET	/api/users	Get all users
 POST	/api/users	Add a new user
@@ -72,17 +73,17 @@ X-Api-Key: your-secret-key
 ✅ In-memory store (no database required)
 
 🤖 Powered with Copilot
-Microsoft Copilot helped me:
+Throughout development, I used Microsoft Copilot to:
 
-Fix model binding issues
+Debug model binding issues and resolve 400/500 errors
 
-Write cleaner LINQ queries
+Refactor data structures (e.g., from List to Dictionary for performance)
 
-Refactor middleware logic
+Implement validation using Validator.TryValidateObject
 
-Generate example DTOs
+Design and register custom middleware components
 
-Enhance error responses
+Improve error messaging and developer experience
 
 📄 License
 MIT License
